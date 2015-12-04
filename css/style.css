@@ -509,11 +509,11 @@
 			border-radius: 100%;
 		}
 
-		.image.spred img
+		.image .spred img
 		{
 			width: 100%;
-			margin-left: auto;
-			margin-right: auto;
+			padding-left: auto;
+			padding-right: auto;
 		}
 
 /* List */
