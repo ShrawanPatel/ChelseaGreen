@@ -24,6 +24,27 @@
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/init.js"></script>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<script>
+		
+		//doesn't block the load event
+		function createIframe(){
+		  var i = document.createElement("iframe");
+		  i.src = "path/to/file";
+		  i.scrolling = "auto";
+		  i.frameborder = "0";
+		  i.width = "200px";
+		  i.height = "100px";
+		  document.getElementById("googlemap").appendChild(i);
+		};
+			
+		// Check for browser support of event handling capability
+		if (window.addEventListener)
+		window.addEventListener("load", createIframe, false);
+		else if (window.attachEvent)
+		window.attachEvent("onload", createIframe);
+		else window.onload = createIframe;
+
+		</script>
 	</head>
 	
 	<body class="landing">
